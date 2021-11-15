@@ -12,10 +12,10 @@
     <script type="text/javascript" src="../../static/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../static/js/common.js"></script>
 </head><body>
-<div class="ui-wrap check-list-wrap">
-    <!-- header -->
-    <header class="ui-header">
-        
+    <div class="ui-wrap check-list-wrap">
+        <!-- header -->
+        <header class="ui-header">
+            
     <button type="button" class="btn-prev">
         <span class="icon">이전</span>
     </button>
@@ -89,29 +89,29 @@
     </div>
 </div>
 <!-- // aside-menu-wrap -->
-        <h1 class="title">점검 상세보기</h1>
-    </header>
-    <!-- // header -->
-    <div class="ui-container detail">
-        <!-- content-wrap -->
-        <div class="content-wrap faulty">
-            <div class="main-content">
-                <img class="preview-img" src="../../static/images/check/preview_img.png" alt="철근">
-                <ul class="info-box">
-                    <li>철근 콘크리트 공사</li>
-                    <li class="point-c">A구역 철근</li>
-                    <li>- 점검주기<b>:</b><span>일일 점검</span></li>
-                    <li>- 점검자<b>:</b><span>김안전</span></li>
-                </ul>
-            </div>
-            <div class="main-content v2">
-                <ul class="info-box">
-                    <li>- 점검 완료 여부<b>:</b><span>점검 미완료</span></li>
-                    <li>- 점검 완료 시간<b>:</b><span class="num">2021-07-29 14:56:31</span></li>
-                </ul>
-                <img class="stamp-img" src="../../static/images/check/stamp_incomplete.png" alt="미완료">
-            </div>
-            <!-- list-section -->
+            <h1 class="title">점검 상세보기</h1>
+        </header>
+        <!-- // header -->
+        <div class="ui-container detail">
+            <!-- content-wrap -->
+            <div class="content-wrap">
+                <div class="main-content">
+                    <img class="preview-img" src="../../static/images/check/preview_img.png" alt="철근">
+                    <ul class="info-box">
+                        <li>철근 콘크리트 공사</li>
+                        <li class="point-c">A구역 철근</li>
+                        <li>- 점검주기<b>:</b><span>일일 점검</span></li>
+                        <li>- 점검자<b>:</b><span>김안전</span></li>
+                    </ul>
+                </div>
+                <div class="main-content v2">
+                    <ul class="info-box">
+                        <li>- 점검 완료 여부<b>:</b><span>점검 미완료</span></li>
+                        <li>- 점검 완료 시간<b>:</b><span class="num">2021-07-29 14:56:31</span></li>
+                    </ul>
+                    <img class="stamp-img" src="../../static/images/check/stamp_incomplete.png" alt="미완료">
+                </div>
+                <!-- list-section -->
 <div class="list-section">
     <div class="list-title">
         <p class="txt">점검항목</p>
@@ -126,6 +126,8 @@
         <p class="txt">표지판 부착 및 주변 통제 여부 확인</p>
         <div class="radio-button-list">
             <div class="m-radio-button">
+                <!-- to dev : 라디오 버튼 비활성화시 input[type="radio"] 태그에 disabled 추가 -->
+                <!-- to Dev [toggle tag] : disabled -->
                 <label>
                     <input type="radio" class="a-radio-button" value="good" name="check1">
                 </label>
@@ -154,24 +156,6 @@
                 </label>
             </div>
         </div>
-
-        <!-- reject-content ver.01: 점검항목 '불량' 버튼 클릭시 노출되는 버튼 -->
-        <div class="reject-cont">
-            <div class="btn-box">
-                <button type="button" class="btn">불량 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-
-                <!-- to Dev : 비활성화할 btn에 "disabled" 태그추가 -->
-                <!-- to Dev [toggle tag] : disabled -->
-                <button type="button" class="btn" disabled>조치 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-            </div>
-        </div>
-        <!--// reject-content ver.01: 점검항목 '불량' 버튼 클릭시 노출되는 버튼 -->
     </div>
     <!--// list-item 2 -->
 
@@ -190,46 +174,6 @@
                 </label>
             </div>
         </div>
-
-        <!-- reject-content ver.02: 불량내용 등록 후 리스트 -->
-        <div class="reject-cont">
-            <div class="btn-box">
-                <!-- to dev : 불량 or 조치내용 등록 후 button 태그에 .on 클래스 추가 / 텍스트 "등록" -> "보기"로 변경되도록 css작업 되어있음  -->
-                <!-- to Dev [toggle tag] : on  -->
-                <button type="button" class="btn on">불량 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-
-                <!-- to dev : 불량 or 조치내용 등록 후 button 태그에 disabled 삭제 -->
-                <!-- to Dev [toggle tag] : disabled -->
-                <button type="button" class="btn">조치 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-            </div>
-
-            <div class="img-box">
-                <!-- to dev : 이미지 태그 추가시 .item태그에 .mySwiper 클래스 추가(bg-img, txt 삭제) -->
-                <!-- to Dev [toggle tag] : mySwiper -->
-                <div class="item swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img.png" alt="불량내용1">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img02.png" alt="불량내용2">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img03.png" alt="불량내용3">
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <p class="txt">육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지</p>
-                </div>
-
-                <div class="item swiper">
-                    <div class="swiper-wrapper"></div>
-                    <div class="swiper-pagination"></div>
-                    <p class="txt"></p>
-                </div>
-            </div>
-        </div>
-        <!--//  reject-content ver.02: 불량내용 등록 후 리스트 -->
     </div>
     <!--// list-item 3 -->
 
@@ -248,44 +192,6 @@
                 </label>
             </div>
         </div>
-
-        <!-- reject-content ver.03: 조치내용 등록 후 리스트 -->
-        <div class="reject-cont">
-            <div class="btn-box">
-                <button type="button" class="btn on">불량 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-
-                <button type="button" class="btn on">조치 내용
-                    <span class="txt-1">등록</span>
-                    <span class="txt-2">보기</span>
-                </button>
-            </div>
-
-            <div class="img-box">
-                <div class="item swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img.png" alt="불량내용1">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img02.png" alt="불량내용2">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img03.png" alt="불량내용3">
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <p class="txt">육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지</p>
-                </div>
-
-                <div class="item swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img.png" alt="불량내용1">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img02.png" alt="불량내용2">
-                        <img class="swiper-slide" src="../../static/images/check/sample_img03.png" alt="불량내용3">
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <p class="txt">육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지 육안점검시 과적방지</p>
-                </div>
-            </div>
-        </div>
-        <!--//  reject-content ver.03: 조치내용 등록 후 리스트 -->
     </div>
     <!--// list-item 4 -->
 
@@ -401,29 +307,42 @@
 
 
 
+            </div>
+            <!--// content-wrap -->
         </div>
-        <!--// content-wrap -->
-    </div>
 
-    <!-- btn-wrap -->
-    <div class="check-btn-wrap">
-        <div class="btn-box two-btn-wrap">
-            <button type="button" class="btn gray-btn">취소</button>
-            <button type="button" class="btn navy-btn">등록</button>
+        <!-- btn-wrap -->
+        <div class="check-btn-wrap">
+            <div class="btn-box">
+                <button type="button" class="btn navy-btn">점검하기</button>
+            </div>
+
+            <div class="btn-list">
+                <!-- to dev : 비 활성화 되는 button, a태그에 클래스 .btn-off 추가 -->
+                <!-- to Dev [toggle Class] : btn-off -->
+                <button class="btn" type="button">
+                    <span class="icon real-time"></span>
+                    <span class="txt">실시간알림</span>
+                </button>
+
+                <button class="btn" type="button">
+                    <span class="icon sns-share"></span>
+                    <span class="txt">내용공유</span>
+                </button>
+
+                <a class="btn" href="tel:02-000-0000">
+                    <span class="icon connect"></span>
+                    <span class="txt">관리자 연결</span>
+                </a>
+
+                <button class="btn" type="button">
+                    <span class="icon check-checkie"></span>
+                    <span class="txt">췌키 확인</span>
+                </button>
+            </div>
         </div>
+        <!--// btn-wrap -->
     </div>
-    <!--// btn-wrap -->
-</div>
-
-<script>
-    /* 점검 항목 상세 - Swiper s */
-    const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
-    /* 점검 항목 상세 - Swiper e */
-</script>
 </body>
+</html>
 
